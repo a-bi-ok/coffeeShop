@@ -47,7 +47,7 @@ public class CoffeeMixer {
 			drink.setSugar(count);
 
 			System.out.println(
-					"Added " + drink.getSugar() + " unit(s) of sugar");
+					"Added " + drink.getSugar() + " unit(s) of SUGAR");
 
 			break;
 
@@ -58,7 +58,7 @@ public class CoffeeMixer {
 			drink.setCream(count);
 
 			System.out.println(
-					"Added " + drink.getCream() + " unit(s) of sugar");
+					"Added " + drink.getCream() + " unit(s) of CREAM");
 			break;
 		default:
 			// code block
