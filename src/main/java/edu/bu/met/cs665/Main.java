@@ -60,6 +60,7 @@ public class Main {
 
 		if (logger.isDebugEnabled())
 			logger.debug(mDrink.toString());
+		
 
 		teaMixer.addCondiments(mDrink, CoffeeMixer.Condiment.CREAM);
 		teaMixer.addCondiments(mDrink, CoffeeMixer.Condiment.CREAM);

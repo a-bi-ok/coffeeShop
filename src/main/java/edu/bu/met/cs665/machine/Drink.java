@@ -2,10 +2,10 @@ package edu.bu.met.cs665.machine;
 
 public class Drink {
 
-	public final int WATER = 8; // 8 ounces of water for a cup
+	public static final int WATER = 8; // 8 ounces of water for a cup
 	
-	private final int MAX_VALUE = 3; 
-	private final double MAX_COST = 11; 
+	private static final int MAX_VALUE = 3; 
+	private static final double MAX_COST = 11; 
 
 	private String name;
 	private int cream;
@@ -46,8 +46,11 @@ public class Drink {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-
+	
+	
+	/*
+	 * Enforces max cream value of 3
+	 */	
 	public void setCream(int cream) {
 		if(cream <= MAX_VALUE) {
 			this.cream = cream; 
@@ -56,7 +59,10 @@ public class Drink {
 			System.out.println("You need to watch your CREAM intake, you are limited to only 3 units!");
 		}
 	}
-
+	
+	/*
+	 *  Enforces max sugar value of 3
+	 */	
 	public void setSugar(int sugar) {	
 		if(sugar <= MAX_VALUE) {
 			this.sugar = sugar; 
@@ -66,7 +72,11 @@ public class Drink {
 
 		}
 	}
-
+	
+	
+	/*
+	 * Enforces max cost value
+	 */	
 	public void setCost(double cost) {
 		if(cost <= MAX_COST)
 			this.cost = cost;

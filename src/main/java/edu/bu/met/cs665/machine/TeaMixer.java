@@ -15,6 +15,10 @@ public class TeaMixer {
 	private Drink mDrink;
 	private int count;
 
+	/*
+	 * returns a Drink Object with a coffee input choice
+	 */
+
 	public Drink makeDrink(Tea tea) {
 
 		mDrink = new Drink(tea.toString(), 0, 0, 3.99);
@@ -37,6 +41,11 @@ public class TeaMixer {
 		}
 		return mDrink;
 	}
+
+	/*
+	 * returns a Drink object with added condiment selected, increases count of
+	 * condiment in object to max value
+	 */
 
 	public Drink addCondiments(Drink drink, Condiment condiment) {
 
@@ -63,6 +72,9 @@ public class TeaMixer {
 		return drink;
 	}
 
+	/*
+	 * returns total cost of drink after all user input is completed
+	 */
 	public double calculateCost(Drink drink) {
 		double mCost = drink.getCost();
 		int countSugar = drink.getSugar();
