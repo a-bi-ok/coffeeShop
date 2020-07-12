@@ -5,7 +5,6 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import edu.bu.met.cs665.machine.CoffeeMixer.Coffee;
-import edu.bu.met.cs665.machine.TeaMixer.Tea;
 
 public class CoffeeMixerTest {
 	
