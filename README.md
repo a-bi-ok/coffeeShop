@@ -1,3 +1,22 @@
+
+# Implementation Description
+
+The Coffee Maker Program primarily implements robustness, flexibility and re-usability design principles.
+
+Robustness is implemented with the program's ability to control specified integer, string and double inputs (data) types while enforcing limits with MAX and MIN values and Cost. The application also gracefully handles erroneous inputs by preserving max values and displaying info logs.
+
+Flexibility is also handled by the individuality of the classes allowing for easy price, cost, condiments, coffee and tea flavor modifications. Two techniques employed to enhance flexibility and avoid duplication is the use of Drink.java class as a component (composition) of the Mixer classes. Additionally the use of public static visibility modifiers for the Condiment Enum type object allows for global visibility reducing duplication project.
+
+Re-usability is also implemented by the usage of composition type relationships within classes and dependency relationships between packages. The use of the base Drink.java class allows easy code reuse for other Mixer types. By this implementation the ultimate goal of low coupling between packages and high cohesion within each package is attained.
+
+The program implements simplicity by the directness in in the package design and class relationships including the number of methods, classes and the simplicity in testing each object.
+
+
+# UML Class Diagram
+
+![coffeeshop UML Diagram](coffeeShop-UML-Diagram.png)
+
+
 # Project Template
 
 This is a Java Maven Project Template
@@ -6,8 +25,6 @@ This is a Java Maven Project Template
 # How to compile the project
 
 We use Apache Maven to compile and run this project. 
-
-You need to install Apache Maven (https://maven.apache.org/)  on your system. 
 
 Type on the command line: 
 
@@ -29,17 +46,6 @@ mvn clean compile assembly:single
 mvn -q clean compile exec:java -Dexec.executable="edu.bu.met.cs665.Main" -Dlog4j.configuration="file:log4j.properties"
 ```
 
-We recommand the above command for running the project. 
-
-Alternativly, you can run the following command. It will generate a single jar file with all of the dependencies. 
-
-```bash
-mvn clean compile assembly:single
-
-java -Dlog4j.configuration=file:log4j.properties -classpath ./target/JavaProjectTemplate-1.0-SNAPSHOT-jar-with-dependencies.jar  edu.bu.met.cs665.Main
-```
-
-
 # Run all the unit test classes.
 
 
@@ -50,38 +56,9 @@ mvn clean compile test
 
 # Using Findbugs 
 
-To see bug detail using the Findbugs GUI, use the following command "mvn findbugs:gui"
-
-Or you can create a XML report by using  
-
-
-```bash
-mvn findbugs:gui 
-```
-
-or 
-
-
 ```bash
 mvn findbugs:findbugs
 ```
-
-
-For more info about FindBugs see 
-
-http://findbugs.sourceforge.net/
-
-And about Maven Findbug plugin see 
-https://gleclaire.github.io/findbugs-maven-plugin/index.html
-
-
-You can install Findbugs Eclipse Plugin 
-
-http://findbugs.sourceforge.net/manual/eclipse.html
-
-
-
-SpotBugs https://spotbugs.github.io/ is the spiritual successor of FindBugs.
 
 
 # Run Checkstyle 
@@ -97,7 +74,6 @@ mvn checkstyle:check
 
 This will generate a report in XML format
 
-
 ```bash
 target/checkstyle-checker.xml
 target/checkstyle-result.xml
@@ -109,19 +85,10 @@ and the following command will generate a report in HTML format that you can ope
 mvn checkstyle:checkstyle
 ```
 
-```bash
-target/site/checkstyle.html
-```
-
-
 # Generate  coveralls:report 
 
-You can find more info about coveralls 
-
-https://coveralls.io/
-
 ```bash
-mvn -DrepoToken=YOUR-REPO-TOCKEN-ON-COVERALLS  cobertura:cobertura coveralls:report
+mvn -DrepoToken=<YOUR-REPO-TOCKEN-ON-COVERALLS> cobertura:cobertura coveralls:report
 ```
 
 
