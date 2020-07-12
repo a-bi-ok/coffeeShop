@@ -9,7 +9,8 @@ Flexibility is also handled by the individuality of the classes allowing for eas
 
 Re-usability is also implemented by the usage of composition type relationships within classes and dependency relationships between packages. The use of the base Drink.java class allows easy code reuse for other Mixer types. By this implementation the ultimate goal of low coupling between packages and high cohesion within each package is attained.
 
-The program implements simplicity by the directness in in the package design and class relationships including the number of methods, classes and the simplicity in testing each object.
+The program implements simplicity by the directness in the package and class design, relationships and implementation. This simplicity in implementation is also evident in the use of less lines of code to attain the desired functionality. This is further evident in the simplicity and ability to unit test each single method.
+
 
 
 # UML Class Diagram
