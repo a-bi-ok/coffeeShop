@@ -1,6 +1,9 @@
 package edu.bu.met.cs665.machine;
 
-
+/**
+ * @author tim_abiok
+ *
+ */
 public class CoffeeMixer {
 
 	public static enum Coffee {
@@ -12,7 +15,7 @@ public class CoffeeMixer {
 	}
 
 	private Drink mDrink;
-//	private double mCost;
+	//	private double mCost;
 	private int count;
 
 	public Drink makeDrink(Coffee coffee) {
@@ -33,7 +36,6 @@ public class CoffeeMixer {
 			break;
 
 		default:
-			// code block
 		}
 		return mDrink;
 	}
@@ -46,8 +48,7 @@ public class CoffeeMixer {
 			count += 1;
 			drink.setSugar(count);
 
-			System.out.println(
-					"Added " + drink.getSugar() + " unit(s) of SUGAR");
+			System.out.println("Added " + drink.getSugar() + " unit(s) of SUGAR");
 
 			break;
 
@@ -57,8 +58,7 @@ public class CoffeeMixer {
 			count += 1;
 			drink.setCream(count);
 
-			System.out.println(
-					"Added " + drink.getCream() + " unit(s) of CREAM");
+			System.out.println("Added " + drink.getCream() + " unit(s) of CREAM");
 			break;
 		default:
 			// code block
@@ -68,15 +68,13 @@ public class CoffeeMixer {
 
 	public double calculateCost(Drink drink) {
 		double mCost = drink.getCost();
-		//NumberFormat df = new DecimalFormat("#0.00");
-			int countSugar = drink.getSugar(); 
-			mCost += 0.99 * countSugar; //assuming a unit of sugar cost .99
+		int countSugar = drink.getSugar();
+		mCost += 0.99 * countSugar; // assuming a unit of sugar cost .99
 
-			int countCream = drink.getCream();
-			mCost += 0.99 * countCream;
-			
-			
-			drink.setCost(mCost);
+		int countCream = drink.getCream();
+		mCost += 0.99 * countCream;
+
+		drink.setCost(mCost);
 		return mCost;
 
 	}

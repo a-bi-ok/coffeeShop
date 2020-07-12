@@ -53,7 +53,7 @@ public class Drink {
 			this.cream = cream; 
 			}
 		else {			
-			System.out.println("You need to watch your CREAM intake, you are limited to only 3 units");
+			System.out.println("You need to watch your CREAM intake, you are limited to only 3 units!");
 		}
 	}
 
@@ -62,7 +62,7 @@ public class Drink {
 			this.sugar = sugar; 
 			}
 		else {			
-			System.out.println("You need to watch your SUGAR intake, you are limited to only 3 units");
+			System.out.println("You need to watch your SUGAR intake, you are limited to only 3 units!");
 
 		}
 	}
