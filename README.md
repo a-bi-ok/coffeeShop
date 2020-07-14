@@ -3,24 +3,24 @@
 
 The Coffee Maker Program primarily implements robustness, flexibility and re-usability design principles.
 
-Robustness is implemented with the program's ability to control specified integer, string and double inputs (data) types while enforcing limits with MAX and MIN values and Cost. The application also gracefully handles erroneous inputs by preserving max values and displaying info logs.
+Robustness is attained by encapsulating the base variables of the Drink.java class implementing an ability to control specified integer, string and double inputs (data) types while enforcing limits with MAX, MIN cost limit values. The application also gracefully handles erroneous inputs by preserving limit values while displaying info logs for violation attempts.
 
-Flexibility is also handled by the individuality of the classes allowing for easy price, cost, condiments, coffee and tea flavor modifications. Two techniques employed to enhance flexibility and avoid duplication is the use of Drink.java class as a component (composition) of the Mixer classes. Additionally the use of public static visibility modifiers for the Condiment Enum type object allows for global visibility reducing duplication project.
+Flexibility is also handled by the individuality of the classes allowing for easy price, cost, condiments, coffee and tea flavor modifications. Two techniques employed to enhance flexibility and avoid duplication is the use of Drink.java class as a member (aggregation) of the Mixer classes. Additionally the use of public static visibility modifiers for the Condiment Enum type object allows for global visibility reducing duplication in the application.
 
-Re-usability is also implemented by the usage of composition type relationships within classes and dependency relationships between packages. The use of the base Drink.java class allows easy code reuse for other Mixer types. By this implementation the ultimate goal of low coupling between packages and high cohesion within each package is attained.
+Re-usability is also implemented by the usage of aggregation type relationships within classes. The use of the base Drink.java class allows easy code reuse for other Mixer types. By this implementation the ultimate goal of low coupling between packages and high cohesion within each package is attained.
 
-The program implements simplicity by the directness in the package and class design, relationships and implementation. This simplicity in implementation is also evident in the use of less lines of code to attain the desired functionality. This is further evident in the simplicity and ability to unit test each single method.
+The program implements simplicity by the directness in the package and class design, relationships and implementation. This simplicity is also evident in the use of less lines of code to attain the desired functionality. This is further evident in the simplicity and ability to efficiently unit test each single method.
 
 
 
 # UML Class Diagram
 
-![coffeeshop UML Diagram](coffeeShop-UML-Diagram.png)
+![coffee Machine UML Diagram](coffeemachine-UML-Diagram.png)
 
 
 # Project Template
 
-This is a Java Maven Project Template
+This is a Java Maven Project Templates
 
 
 # How to compile the project
@@ -88,8 +88,11 @@ mvn checkstyle:checkstyle
 
 # Generate  coveralls:report 
 
+
+PLEASE NOT THAT REPORT GENERATION ERRORS OUT BECUASE REPO IS NOT CURRENTLLY ACCESSIBLE VIA COVERALLS.
+
 ```bash
-mvn -DrepoToken=<YOUR-REPO-TOCKEN-ON-COVERALLS> cobertura:cobertura coveralls:report
+mvn -DrepoToken=4PhP9IUo1DeJfyIte4GbNys2RnsYU8rpfQqKr  cobertura:cobertura coveralls:report
 ```
 
 
